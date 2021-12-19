@@ -27,3 +27,12 @@ function zeroPad(num) {
   const pad = str.padStart(2, 0)
   return pad
 }
+
+let timer
+window.addEventListener('mousemove', function() {
+  document.body.classList.remove('hide-cursor')
+  clearTimeout(timer)
+  timer = setTimeout(function() {
+    document.body.classList.add('hide-cursor')
+  }, 3000)
+})
