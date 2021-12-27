@@ -19,6 +19,9 @@ function displayClock() {
     const ss = zeroPad(date.getSeconds())
     const time = `${hh}:${mm}:${ss}`
     document.querySelector('#clock').textContent = time
+    if ((mm + ss) == '0000') {
+      location.reload();
+    }
   },1000)
 }
 
